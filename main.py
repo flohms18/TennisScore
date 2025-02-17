@@ -31,7 +31,18 @@ intro()
 def Game():
    ScoreP1 = 0
    ScoreP2 = 0
-   Point = rd.randint(1,2)
-   
+   while ScoreP1 != 4 or ScoreP2 != 4: 
+        Point = rd.randint(1,2)
+        if Point == 1: 
+            ScoreP1 += 1
+        else :
+           ScoreP2 += 1
+        
+        if ScoreP1 == 4 : 
+            print("P1 wins the game!")
+        elif ScoreP2 == 4:
+            print("P2 wins the game!")
+      
+
 
    
