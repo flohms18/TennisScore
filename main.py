@@ -1,5 +1,8 @@
 import random as rd
 
+ScoreP1 = 0
+ScoreP2 = 0
+
 def intro():
     Serve = rd.randint(0,1)
     if Serve == 0:
@@ -17,11 +20,12 @@ def intro():
             print("P2 to Serve")
     print("Picture done")
     print("Warm-up completed")
-    print("The match is about to start")
+    print("The match is about to start...")
 
 
     
 intro()
+
 
 # ScoreEvol
 # GameEvol
