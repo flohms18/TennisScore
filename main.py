@@ -1,8 +1,6 @@
 import random as rd
 import keyboard
 
-
-
 def intro():
     Serve = rd.randint(0,1)
     if Serve == 0:
@@ -58,6 +56,13 @@ def ScoreEvol():
                 print("Ad P2")
     else:
             print(f"{scores[ScoreP1]} - {scores[ScoreP2]}")
+
+    if GameP1 == 6 or 7 and GameP1 - GameP2 >= 2:
+        print("P1 wins the set")
+    elif GameP2 == 6 or 7 and GameP2 - GameP1 >= 2:
+        print("P2 wins the set")
+    elif GameP1 == 6 and GameP2 == 6:
+        print("Tie-Break !!")
 
 ScoreEvol()
 
