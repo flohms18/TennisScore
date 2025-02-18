@@ -31,7 +31,7 @@ intro()
 def ScoreEvol():
     PointWinner = rd.randint(1,2)
     scores = ["0","15","30","40","A"]
-    if keyboard.is_press("space"):
+    if keyboard.is_pressed("space"):
         if PointWinner == 1:
             ScoreP1 += 1
         else:
@@ -50,6 +50,7 @@ def ScoreEvol():
         else:
             print("Ad P2")
 
+ScoreEvol()
 
 
 def GameEvol():
