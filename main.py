@@ -26,7 +26,8 @@ intro()
 
 def ScoreEvol():
     
-    
+    SetP1 = 0
+    SetP2 = 0
     GameP1 = 0
     GameP2 = 0
     scores = ["0","15","30","40","A"]
@@ -63,13 +64,19 @@ def ScoreEvol():
 
         if GameP1 == 6 or GameP1 == 7 and GameP1 - GameP2 >= 2:
             print("P1 wins the set")
+            SetP1 += 1
             break
         elif GameP2 == 6 or GameP2 == 7 and GameP2 - GameP1 >= 2:
             print("P2 wins the set")
+            SetP2 += 1
             break
         elif GameP1 == 6 and GameP2 == 6:
             print("Tie-Break !!")
             break
+        
+    print(f"{SetP1} - {SetP2}\n------- ")
+            
+
     
     
 
