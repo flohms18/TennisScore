@@ -1,6 +1,5 @@
 import random as rd
 import keyboard
-
 ScoreP1 = 0
 ScoreP2 = 0
 GameP1 = 0
@@ -32,7 +31,7 @@ intro()
 def ScoreEvol():
     PointWinner = rd.randint(1,2)
     scores = ["0","15","30","40","A"]
-    if keyboard.is_pressed("space"):
+    if keyboard.is_press("space"):
         if PointWinner == 1:
             ScoreP1 += 1
         else:
@@ -54,12 +53,16 @@ def ScoreEvol():
 
 
 def GameEvol():
-    if GameP1 == 6 and GameP1 - GameP2 >= 2:
+    if GameP1 >= 6 and GameP1 - GameP2 >= 2:
         print("P1 wins the set ")
-    elif GameP2 == 6 and GameP2 - GameP1 >= 2:
-        
+    elif GameP2 >= 6 and GameP2 - GameP1 >= 2:
+        print("P2 wins the set ")
+    elif GameP1 == 5 and GameP2 == 5:
+        ScoreEvol()
+    elif GameP1 == 6 and GameP2 == 6:
+        print("TieBreak")
     
-
+GameEvol()
 
         
 
