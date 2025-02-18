@@ -20,20 +20,4 @@ def intro():
     
 intro()
 
-def score():
-    ScoreP1 = 0
-    ScoreP2 = 0
-    PointWinner = rd.randint(0,1)
-    if PointWinner == 0:
-        print("P1 wins the point")
-        ScoreP1 += 1
-        
-    else:
-        print("P2 wins the point")
-        ScoreP2 += 1
-    print(f"{ScoreP1}-{ScoreP2}")
-       
-
-score()
-
 
