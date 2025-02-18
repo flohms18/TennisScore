@@ -29,27 +29,32 @@ def intro():
 intro()
 
 def ScoreEvol():
+    
     PointWinner = rd.randint(1,2)
     ScoreP1 = 0
     ScoreP2 = 0
     scores = ["0","15","30","40","A"]
+    
     if PointWinner == 1:
         ScoreP1 += 1
     else:
         ScoreP2 += 1
-if ScoreP1 >= 4 and ScoreP1 - ScoreP2 >= 2:
-    print("P1 wins the game")
-    GameP1 += 1
-elif ScoreP2 >= 4 and ScoreP2 - ScoreP1 >= 2:
-    print("P2 wins the game")
-    GameP2 += 1
-elif ScoreP1 >= 3 and ScoreP2 >= 3:
-    if ScoreP1 == ScoreP2:
-        print("Deuce")
-    elif ScoreP1 > ScoreP2:
-        print("Ad P1")
+
+    if ScoreP1 >= 4 and ScoreP1 - ScoreP2 >= 2:
+        print("P1 wins the game")
+        GameP1 += 1
+    elif ScoreP2 >= 4 and ScoreP2 - ScoreP1 >= 2:
+        print("P2 wins the game")
+        GameP2 += 1
+    elif ScoreP1 >= 3 and ScoreP2 >= 3:
+        if ScoreP1 == ScoreP2:
+            print("Deuce")
+        elif ScoreP1 > ScoreP2:
+            print("Ad P1")
+        else:
+            print("Ad P2")
     else:
-        print("Ad P2")
+        print(f"{scores[ScoreP1]} - {scores[ScoreP2]}")
 
 ScoreEvol()
 
@@ -76,6 +81,7 @@ GameEvol()
 # GameEvol
 # TiBreakEvol
 # SetEvol
+# Serve var to display in the right order 
 
 
 
