@@ -1,9 +1,7 @@
 import random as rd
 import keyboard
-ScoreP1 = 0
-ScoreP2 = 0
-GameP1 = 0
-GameP2 = 0
+
+
 
 def intro():
     Serve = rd.randint(0,1)
@@ -29,16 +27,25 @@ def intro():
 intro()
 
 def ScoreEvol():
+
     
-    PointWinner = rd.randint(1,2)
+    
+    PointWinner = rd.randint(0,1)
+    print(PointWinner)
     ScoreP1 = 0
     ScoreP2 = 0
+    GameP1 = 0
+    GameP2 = 0
     scores = ["0","15","30","40","A"]
+
     
-    if PointWinner == 1:
+    
+    if PointWinner == 0:
         ScoreP1 += 1
+        print("I lose!")
     else:
         ScoreP2 += 1
+        print("I won!")
 
     if ScoreP1 >= 4 and ScoreP1 - ScoreP2 >= 2:
         print("P1 wins the game")
@@ -52,25 +59,17 @@ def ScoreEvol():
         elif ScoreP1 > ScoreP2:
             print("Ad P1")
         else:
-            print("Ad P2")
+                print("Ad P2")
     else:
-        print(f"{scores[ScoreP1]} - {scores[ScoreP2]}")
+            print(f"{scores[ScoreP1]} - {scores[ScoreP2]}")
 
 ScoreEvol()
 
 
-def GameEvol():
-    if GameP1 >= 6 and GameP1 - GameP2 >= 2:
-        print("P1 wins the set ")
-    elif GameP2 >= 6 and GameP2 - GameP1 >= 2:
-        print("P2 wins the set ")
-    elif GameP1 == 5 and GameP2 == 5:
-        ScoreEvol()
-    elif GameP1 == 6 and GameP2 == 6:
-        print("TieBreak")
-        # TieBreak
+
     
-GameEvol()
+    
+
 
         
 
