@@ -28,8 +28,6 @@ intro()
 
 def ScoreEvol():
 
-    
-    
     PointWinner = rd.randint(0,1)
     print(PointWinner)
     ScoreP1 = 0
@@ -38,8 +36,6 @@ def ScoreEvol():
     GameP2 = 0
     scores = ["0","15","30","40","A"]
 
-    
-    
     if PointWinner == 0:
         ScoreP1 += 1
         print("I lose!")
