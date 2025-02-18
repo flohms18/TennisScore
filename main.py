@@ -1,4 +1,5 @@
 import random as rd
+import keyboard
 
 ScoreP1 = 0
 ScoreP2 = 0
@@ -25,6 +26,11 @@ def intro():
 
     
 intro()
+
+def ScoreEvol():
+    PointWinner = rd.randint()
+    scores = ["0","15","30","40","A"]
+
 
 
 # ScoreEvol
